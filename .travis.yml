@@ -3,10 +3,10 @@ services:
         - docker
 
 before_install:
-        - docker build -t Michael-Machin/docker-react -f Dockerfile.dev .
+        - docker build -t michael-machin/docker-react -f Dockerfile.dev .
 
 script:
-        - docker run Michael-Machin/docker-react npm run test -- --coverage
+        - docker run michael-machin/docker-react npm run test -- --coverage
 
 deploy: 
         provider: elasticbeanstalk
